@@ -24,7 +24,7 @@ export default function Inicio() {
         <ul className="hidden md:flex gap-8 text-sm font-semibold text-gray-300 mr-auto">
           <li className="text-white border-b-2 border-[#0778DE] pb-1 cursor-pointer"><Link to="/">Inicio</Link></li>
           <li className="hover:text-white cursor-pointer transition-colors"><Link to="/nosotros">Nosotros</Link></li>
-          <li className="hover:text-white cursor-pointer transition-colors">Servicios</li>
+          <li className="hover:text-white cursor-pointer transition-colors"><Link to="/servicios">Servicios</Link></li>
           <li className="hover:text-white cursor-pointer transition-colors">Proyectos</li>
           <li className="hover:text-white cursor-pointer transition-colors">Contacto</li>
         </ul>
