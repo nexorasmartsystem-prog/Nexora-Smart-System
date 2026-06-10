@@ -7,6 +7,7 @@ import Nosotros from "./pages/Nosotros";
 import DetalleServicio from "./pages/DetalleServicio";
 import Servicios from "./pages/Servicios";
 import CatalogoDomotica from "./pages/CatalogoDomotica";
+import CatalogoCCTV from "./pages/CatalogoCCTV";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/servicio/:id" element={<DetalleServicio />} />
         <Route path="/servicio/domotica-integral" element={<CatalogoDomotica />} />
         <Route path="/servicios" element={<Servicios />} />
+        <Route path="/catalogo-cctv" element={<CatalogoCCTV />} />
         
       </Routes>
     </Router>

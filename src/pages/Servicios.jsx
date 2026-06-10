@@ -10,10 +10,11 @@ import cctvImg from "../assets/cctv-servicios.png";
 import controlImg from "../assets/control-servicios.png";
 
 function Servicios() {
-  // Datos de las tarjetas
+  // Datos de las tarjetas con la propiedad 'ruta' agregada
   const serviciosData = [
     {
       id: "domotica-integral", 
+      ruta: "/servicio/domotica-integral", // Ruta normal
       titulo: "DOMÓTICA INTEGRAL",
       subtitulo: "Control Total de Tu Entorno",
       img: domoticaImg,
@@ -27,6 +28,7 @@ function Servicios() {
     },
     {
       id: "cctv-y-seguridad",
+      ruta: "/catalogo-cctv", // <--- Nueva ruta que redirige a tu catálogo de CCTV
       titulo: "CCTV Y SEGURIDAD",
       subtitulo: "Vigilancia y Protección 24/7",
       img: cctvImg,
@@ -40,6 +42,7 @@ function Servicios() {
     },
     {
       id: "edificios-inteligentes",
+      ruta: "/servicio/edificios-inteligentes", // Ruta normal
       titulo: "EDIFICIOS INTELIGENTES",
       subtitulo: "Modernización y Eficiencia",
       img: controlImg,
@@ -135,8 +138,9 @@ function Servicios() {
                   ))}
                 </ul>
 
+                {/* Se cambia {`/servicio/${servicio.id}`} por la ruta asignada en el arreglo */}
                 <Link 
-                  to={`/servicio/${servicio.id}`} 
+                  to={servicio.ruta} 
                   className="mt-auto self-start px-6 py-2.5 border border-[#0778DE] text-white rounded-full text-sm font-semibold hover:bg-[#0778DE] hover:shadow-[0_0_15px_rgba(7,120,222,0.4)] transition-all"
                 >
                   {servicio.btnText}

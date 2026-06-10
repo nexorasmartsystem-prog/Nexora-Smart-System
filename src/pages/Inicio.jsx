@@ -7,10 +7,11 @@ import cctv from "../assets/cctv.png";
 import control from "../assets/control.png";
 
 export default function Inicio() {
+  // Agregamos la propiedad 'ruta' a cada tarjeta para tener control exacto hacia dónde van
   const tarjetasServicios = [
-    { id: "domotica-integral", titulo: "Domótica integral", desc: "Transforma tu entorno con automatización inteligente", img: domo },
-    { id: "cctv-y-seguridad", titulo: "CCTV & Seguridad", desc: "Vigilancia continua para tu total tranquilidad", img: cctv },
-    { id: "edificios-inteligentes", titulo: "Edificios inteligentes", desc: "Moderniza tu recepción con gestión automatizada", img: control }
+    { id: "domotica-integral", ruta: "/servicio/domotica-integral", titulo: "Domótica integral", desc: "Transforma tu entorno con automatización inteligente", img: domo },
+    { id: "cctv-y-seguridad", ruta: "/catalogo-cctv", titulo: "CCTV & Seguridad", desc: "Vigilancia continua para tu total tranquilidad", img: cctv },
+    { id: "edificios-inteligentes", ruta: "/servicio/edificios-inteligentes", titulo: "Edificios inteligentes", desc: "Moderniza tu recepción con gestión automatizada", img: control }
   ];
 
   return (
@@ -53,15 +54,17 @@ export default function Inicio() {
             <a href="https://wa.me/573024156428" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#0047FF] to-[#0778DE] text-white font-bold rounded-xl hover:scale-105 transition-transform duration-300 shadow-[0_0_20px_rgba(7,120,222,0.4)] text-sm md:text-base tracking-wide">
               Solicita una asesoría gratuita →
             </a>
-            <button className="flex items-center justify-center gap-3 px-8 py-4 bg-transparent border-2 border-gray-500/50 text-white/80 font-bold rounded-xl hover:border-[#5EDEF7] hover:bg-white/5 transition-all duration-300 text-sm md:text-base tracking-wide">
+            
+            {/* Convertido a Link apuntando a /servicios */}
+            <Link to="/servicios" className="flex items-center justify-center gap-3 px-8 py-4 bg-transparent border-2 border-gray-500/50 text-white/80 font-bold rounded-xl hover:border-[#5EDEF7] hover:bg-white/5 transition-all duration-300 text-sm md:text-base tracking-wide">
               Conoce nuestros servicios →
-            </button>
+            </Link>
           </div>
         </div>
 
         <div className="flex flex-col gap-5 w-full max-w-md lg:ml-auto">
           {tarjetasServicios.map((tarjeta) => (
-            <Link key={tarjeta.id} to={`/servicio/${tarjeta.id}`} className="group flex items-center gap-5 bg-[#0A1628]/60 border border-[#1E3A5F] p-5 rounded-2xl backdrop-blur-md cursor-pointer hover:border-[#0778DE] hover:-translate-x-3 transition-all duration-300">
+            <Link key={tarjeta.id} to={tarjeta.ruta} className="group flex items-center gap-5 bg-[#0A1628]/60 border border-[#1E3A5F] p-5 rounded-2xl backdrop-blur-md cursor-pointer hover:border-[#0778DE] hover:-translate-x-3 transition-all duration-300">
               <div className="w-30 h-30 bg-[#020507]/80 rounded-xl flex items-center justify-center shrink-0 border border-gray-700/50 p-2 group-hover:border-[#0778DE] transition-colors">
                 <img src={tarjeta.img} alt={tarjeta.titulo} className="w-full h-full object-contain group-hover:scale-115 transition-transform duration-300" />
               </div>
