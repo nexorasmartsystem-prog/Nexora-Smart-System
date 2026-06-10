@@ -84,8 +84,8 @@ function Servicios() {
           <li><Link to="/nosotros" className="hover:text-white transition-colors">Nosotros</Link></li>
           {/* Resaltamos la página actual en azul */}
           <li className="text-white border-b-2 border-[#0778DE] pb-1">Servicios</li>
-          <li className="hover:text-white cursor-pointer transition-colors">Proyectos</li>
-          <li className="hover:text-white cursor-pointer transition-colors">Contacto</li>
+          {/*<li className="hover:text-white cursor-pointer transition-colors">Proyectos</li>*/}
+          <li className="hover:text-white cursor-pointer transition-colors"><Link to="/Contacto">Contacto</Link></li>
         </ul>
 
         {/* Botón de WhatsApp integrado en el menú superior */}

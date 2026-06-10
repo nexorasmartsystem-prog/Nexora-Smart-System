@@ -8,6 +8,7 @@ import DetalleServicio from "./pages/DetalleServicio";
 import Servicios from "./pages/Servicios";
 import CatalogoDomotica from "./pages/CatalogoDomotica";
 import CatalogoCCTV from "./pages/CatalogoCCTV";
+import Contacto from "./pages/Contacto";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Route path="/servicio/domotica-integral" element={<CatalogoDomotica />} />
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/catalogo-cctv" element={<CatalogoCCTV />} />
-        
+        <Route path="/Contacto" element={<Contacto />} />
       </Routes>
     </Router>
   );

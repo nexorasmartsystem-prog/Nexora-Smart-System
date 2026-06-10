@@ -26,8 +26,8 @@ export default function Inicio() {
           <li className="text-white border-b-2 border-[#0778DE] pb-1 cursor-pointer"><Link to="/">Inicio</Link></li>
           <li className="hover:text-white cursor-pointer transition-colors"><Link to="/nosotros">Nosotros</Link></li>
           <li className="hover:text-white cursor-pointer transition-colors"><Link to="/servicios">Servicios</Link></li>
-          <li className="hover:text-white cursor-pointer transition-colors">Proyectos</li>
-          <li className="hover:text-white cursor-pointer transition-colors">Contacto</li>
+          {/*<li className="hover:text-white cursor-pointer transition-colors">Proyectos</li>*/}
+          <li className="hover:text-white cursor-pointer transition-colors"><Link to="/Contacto">Contacto</Link></li>
         </ul>
         <a
         href="https://wa.me/573024156428" 

@@ -39,8 +39,8 @@ export default function Nosotros() {
           <li className="hover:text-white cursor-pointer transition-colors"><Link to="/">Inicio</Link></li>
           <li className="text-white border-b-2 border-[#0778DE] pb-1 cursor-pointer"><Link to="/nosotros">Nosotros</Link></li>
           <li className="hover:text-white cursor-pointer transition-colors"><Link to="/servicios">Servicios</Link></li>
-          <li className="hover:text-white cursor-pointer transition-colors">Proyectos</li>
-          <li className="hover:text-white cursor-pointer transition-colors">Contacto</li>
+          {/*<li className="hover:text-white cursor-pointer transition-colors">Proyectos</li>*/}
+          <li className="hover:text-white cursor-pointer transition-colors"><Link to="/Contacto">Contacto</Link></li>
         </ul>
 
         {/* BOTÓN CON LOGO DE WHATSAPP */}
